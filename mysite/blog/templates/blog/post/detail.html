@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %} 
+ 
+{% block title %}{{ post.title }}{% endblock %} 
+ 
+{% block content %}
+<h1>Лента.Вру</h1>
+  <h2>{{ post.title }}</h2>
+  <p class="date"> 
+    Опубликовано {{ post.publish }} автор(блогер): {{ post.author }}
+  </p> 
+  {{ post.body|linebreaks }} 
+{% endblock %}
